@@ -657,33 +657,34 @@
   </properties>
 
   <repositories>
-    <repository>
-      <id>sonatype-nexus-snapshots</id>
-      <name>Sonatype Nexus Snapshots</name>
-      <url>
-        http://oss.sonatype.org/content/repositories/snapshots
-      </url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
+	 <repository>
+            <snapshots />
+            <id>ext-snapshot-local</id>
+            <name>libs-snapshot-local</name>
+            <url>https://ulcentral.itiviti.com/artifactory/ext-snapshot-local</url>
+        </repository>
+
+	<repository>
+		<snapshots>
+			<enabled>false</enabled>
+		</snapshots>
+         <id>ext-release-local</id>
+         <name>libs-release-local</name>
+         <url>https://ulcentral.itiviti.com/artifactory/ext-release-local</url>
+        </repository>
   </repositories>
 
   <distributionManagement>
     <snapshotRepository>
-      <id>sonatype-nexus-snapshots</id>
-      <name>Sonatype Nexus Snapshots</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <id>ext-snapshot-local</id>
+            <name>libs-snapshot-local</name>
+            <url>https://ulcentral.itiviti.com/artifactory/ext-snapshot-local</url>
     </snapshotRepository>
+
     <repository>
-      <id>sonatype-nexus-staging</id>
-      <name>Nexus Release Repository</name>
-      <url>
-        https://oss.sonatype.org/service/local/staging/deploy/maven2/
-      </url>
+         <id>ext-release-local</id>
+         <name>libs-release-local</name>
+         <url>https://ulcentral.itiviti.com/artifactory/ext-release-local</url>
     </repository>
   </distributionManagement>
 
